@@ -51,13 +51,4 @@ Vehículos: `V001`, 5 kg sin refrigeración; `V002`, 30 kg sin refrigeración; `
 12. Consultar despachos no cerrados.
 0. Salir.
 
-## Pruebas
-
-La clase de pruebas está en `pruebas`, fuera de las 16 clases de la aplicación. No se necesita para ejecutar el programa.
-
-```text
-javac -encoding UTF-8 -cp bin -d bin pruebas/PruebasLaboratorio.java
-java -cp bin PruebasLaboratorio
-```
-
 
