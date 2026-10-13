@@ -1,3 +1,4 @@
+package model;
 import java.util.Locale;
 public class Paquete extends Envio {
     private final double largo, ancho, alto;

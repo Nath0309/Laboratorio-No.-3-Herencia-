@@ -1,4 +1,12 @@
+package view;
 import java.util.Scanner;
+
+import model.Despacho;
+import model.Envio;
+import model.EstadoEnvio;
+import model.Ingresos;
+import model.Vehiculo;
+
 import java.util.List;
 import java.util.Map;
 import java.util.Locale;

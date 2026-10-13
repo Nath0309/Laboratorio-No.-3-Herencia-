@@ -1,3 +1,4 @@
+package model;
 import java.util.Locale;
 public class PaqueteFragil extends Paquete {
     private final double valorDeclarado;

@@ -1,4 +1,6 @@
+package model;
 import java.util.Locale;
+
 public class CargaRefrigerada extends Envio {
     private final double temperaturaRequerida;
     private static final double TEMP_MINIMA = -25, TEMP_MAXIMA = 8;

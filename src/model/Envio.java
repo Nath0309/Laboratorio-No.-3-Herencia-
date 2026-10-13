@@ -1,3 +1,4 @@
+package model;
 import java.util.Locale;
 
 public abstract class Envio {
@@ -31,21 +32,21 @@ public abstract class Envio {
     public boolean esCompatibleCon(Vehiculo vehiculo) { return true; }
     protected double tarifaBase() { return destino == Destino.URBANO ? TARIFA_BASE_URBANA : TARIFA_BASE_DEPARTAMENTAL; }
     protected double cargoPorReintento() { return CARGO_REINTENTO; }
-    void marcarAsignado() {
+    public void marcarAsignado() {
         if (estado != EstadoEnvio.EN_BODEGA) throw new IllegalStateException("El envío no está en bodega.");
         estado = EstadoEnvio.ASIGNADO;
     }
-    void liberar() {
+    public void liberar() {
         if (estado != EstadoEnvio.ASIGNADO) throw new IllegalStateException("El envío no está asignado.");
         estado = EstadoEnvio.EN_BODEGA;
     }
-    double registrarSalida() {
+    public double registrarSalida() {
         if (estado != EstadoEnvio.ASIGNADO) throw new IllegalStateException("El envío no está asignado.");
         estado = EstadoEnvio.EN_RUTA;
         intentos++;
         return intentos == 1 ? 0 : cargoPorReintento();
     }
-    void registrarResultado(boolean entregado) {
+    public void registrarResultado(boolean entregado) {
         if (estado != EstadoEnvio.EN_RUTA) throw new IllegalStateException("El envío no está en ruta.");
         estado = entregado ? EstadoEnvio.ENTREGADO
                 : intentos >= maximoIntentos() ? EstadoEnvio.DEVUELTO_AL_REMITENTE : EstadoEnvio.EN_BODEGA;

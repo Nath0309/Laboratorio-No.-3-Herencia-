@@ -1,3 +1,15 @@
+package controller;
+
+import model.CargaRefrigerada;
+import model.Destino;
+import model.EnviaGT;
+import model.Envio;
+import model.Paquete;
+import model.PaqueteFragil;
+import model.Sobre;
+import model.Vehiculo;
+import view.ConsolaView;
+
 public class EnviaGTController {
     private final EnviaGT empresa;
     private final ConsolaView vista;

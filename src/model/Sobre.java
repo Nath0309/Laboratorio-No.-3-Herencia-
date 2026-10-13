@@ -1,3 +1,4 @@
+package model;
 public class Sobre extends Envio {
     private static final double PESO_MAXIMO = 0.5;
     private static final double TARIFA_URBANA = 20, TARIFA_DEPARTAMENTAL = 35;

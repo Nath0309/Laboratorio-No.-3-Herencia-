@@ -1,3 +1,4 @@
+package model;
 public class DatosIniciales {
     public static void cargar(EnviaGT empresa) {
         empresa.cargarEnvioInicial(new Sobre("S001", "Ana", "Luis", 0.3, Destino.URBANO));
